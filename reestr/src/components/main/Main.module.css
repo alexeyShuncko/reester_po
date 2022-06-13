@@ -1,0 +1,153 @@
+.im1 {
+    width: 505px;
+    height: 502px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+
+.mainItem1 {
+    display: flex;
+    align-items: center;
+    padding: 80px 115px;
+    gap: 215px;
+    background: var(--interface-fon);
+
+
+}
+
+.reestr {
+    width: 450px;
+    height: 198px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 66px;
+    color: var(--primary-black);
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+
+
+
+.title {
+
+    width: 404px;
+    height: 54px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--interface-text-1);
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin-bottom: 20px;
+}
+
+
+.PO {
+    width: 277px;
+    height: 54px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--interface-text-1);
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin-bottom: 40px;
+}
+
+.colorNum {
+    color: var(--primary-blue);
+}
+
+
+.inpBut {
+    display: flex;
+    position: absolute;
+}
+
+.inpBut input {
+
+    width: 330px;
+    height: 54px;
+    background: var(--primary-white);
+    border-radius: 5px 0px 0px 5px;
+    border: none;
+    padding-left: 49px;
+
+}
+
+
+.inpBut input::placeholder {
+    width: 118px;
+    height: 19px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--second-grey);
+}
+
+.inpBut button {
+
+    width: 120px;
+    height: 56px;
+    background: var(--primary-blue);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.01em;
+    color: var(--primary-white);
+
+
+}
+
+.searchImg {
+    position: absolute;
+    left: 3.44%;
+    right: 16.2%;
+    top: 25.4%;
+    bottom: 16.42%;
+
+}
+
+.mainItem2 {
+    display: flex;
+    flex-direction: column;
+
+    padding: 80px 115px;
+    gap: 40px;
+    background: var(--primary-white);
+}
+
+.titleReestr {
+    flex: 1;
+    width: 167px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 49px;
+    color: var( --primary-black);
+}
+
+.icons {
+display: flex;
+justify-content: flex-end;
+align-items: center;
+
+}
+
+.voronka {
+margin-right: 30px;
+}
+
+

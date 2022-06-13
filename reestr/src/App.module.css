@@ -1,0 +1,412 @@
+header {
+    display: flex;
+    background: var(--primary-white);
+    height: 80px;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+}
+
+
+.logo {
+    height: 40px;
+    width: 170px;
+    margin: 20px 0px 20px 115px;
+}
+
+.search {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 0px 10px 10px;
+    gap: 5px;
+    position: absolute;
+    left: 22.5%;
+    right: 58.21%;
+    top: 20%;
+    bottom: 20%;
+    background: var(--interface-search);
+    border-radius: 5px;
+
+}
+
+.searchImg {
+    position: absolute;
+    left: 6%;
+    right: 16.2%;
+    top: 22%;
+    bottom: 16.42%;
+}
+
+.search span {
+    width: 45px;
+    height: 19px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    margin-left: 39px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    color: var(--second-grey)
+}
+
+
+.calendar {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: calc(50% - 48px/2 - 171px);
+    top: 0px;
+
+    background: var(--interface-search);
+    border-radius: 30px;
+
+}
+
+.calendarImg {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: calc(50% - 32px/2 - 171px);
+    top: 8px;
+    color: var(--primary-grey);
+}
+
+
+
+.room {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 20px;
+
+    position: absolute;
+    height: 48px;
+    left: 63.93%;
+    right: 8.21%;
+    top: calc(50% - 48px/2);
+}
+
+.item {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: calc(50% - 48px/2 - 103px);
+    top: 0px;
+    background: var(--interface-search);
+    border-radius: 30px;
+
+}
+
+.itemImg {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: calc(50% - 32px/2 - 103px);
+    top: 8px;
+}
+
+
+.num {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 98px;
+    top: 0px;
+    background: var(--primary-blue);
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    border-radius: 10px;
+
+    color: var(--primary-white)
+}
+
+
+.line {
+    width: 2px;
+    height: 48px;
+    background: var(--interface-search);
+    border-radius: 3px;
+    margin-left: 136px;
+    flex: none;
+}
+
+
+.user {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    width: 232px;
+    height: 48px;
+}
+
+
+.user {
+    width: 48px;
+    height: 48px;
+
+    background: var(--interface-search);
+    border-radius: 30px;
+
+}
+
+.userRoom {
+    flex: none;
+    width: 132px;
+    height: 22px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--primary-grey);
+    background: none;
+    border: none;
+}
+
+
+
+
+
+
+.copyr {
+    
+width: 428px;
+height: 19px;
+font-weight: 500;
+font-size: 14px;
+line-height: 19px;
+color: var(--second-grey);
+flex: none;
+order: 1;
+flex-grow: 0;
+    margin-bottom: 80px;
+    margin-left: 486px;
+}
+
+
+.lineFoo {
+margin-left: 70px;
+    width: 1170px;
+    height: 1px;
+    border-radius: 3px;
+    background: var(--interface-line);
+    margin-bottom: 20px;
+    flex: none;
+}
+
+
+
+
+.footerItem {
+display: flex;
+padding-top: 80px;
+padding-left: 115px;
+
+}
+
+.item1 {
+    flex: 1;
+    display: flex;
+  
+}
+.item1_1{
+    flex: 2;
+}
+.item1_2{
+    flex: 1;
+}
+.item2 {
+    flex: 1;
+    display: flex;
+}
+.item2 div{
+    flex: 1;
+}
+
+
+
+
+.text1 {
+ width: 259px;
+height: 63px;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 150%;
+color: var(--interface-text-1);
+flex: none;
+order: 1;
+flex-grow: 0;
+margin-bottom: 40px;
+}
+
+
+.dev {
+    width: 109px;
+    height: 22px;
+    
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--primary-grey);
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-top: 10px;
+}
+
+.dev1 {
+    width: 361px;
+    height: 19px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--interface-text-1);
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+
+
+.dev2 {
+width: 227px;
+height: 19px;
+font-weight: 500;
+font-size: 14px;
+line-height: 19px;
+color: var( --interface-text-2);
+flex: none;
+order: 1;
+flex-grow: 0;
+margin-bottom: 40px;
+
+}
+
+
+.inform {
+    width: 124px;
+    height: 25px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--primary-black);
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-bottom: 20px;
+}
+
+.informItem {
+    width: 64px;
+    height: 19px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--primary-grey);
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+    margin-bottom: 10px;
+}
+
+
+
+.tehhelp {
+    width: 235px;
+    height: 25px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--primary-black);
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-bottom: 20px;
+    
+}
+
+.time {
+    width: 270px;
+    height: 63px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color:var(  --interface-text-1);
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid  var( --interface-line);
+    margin-bottom: 10px;
+   
+}
+
+
+.numTel {
+    width: 185px;
+    height: 19px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--primary-grey);
+    flex: none;
+    order: 4;
+    flex-grow: 0;
+    margin-bottom: 10px;
+}
+
+
+.contact {
+    width: 92px;
+    height: 25px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--primary-black);
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-bottom: 20px;
+}
+
+
+.numAdress {
+    width: 270px;
+    height: 19px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: var( --primary-grey);
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+    margin-bottom: 10px;
+}
+
+.linkContact{
+    width: 180px;
+    height: 19px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    text-decoration-line: underline;
+    color: var(--primary-blue);
+    flex: none;
+    order: 4;
+    flex-grow: 0;
+}
