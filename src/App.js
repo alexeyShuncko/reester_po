@@ -3,7 +3,7 @@ import Main from './components/main/Main';
 import logo from './image/Vector.png'
 import search from './image/search.png'
 import calendar from './image/calendar.png'
-import item from './image/item.png'
+import item from './image/item.svg'
 import user from './image/user.png'
 import arrow from './image/arrow.png'
 
