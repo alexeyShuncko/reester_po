@@ -1,0 +1,16 @@
+.containerCabinet{
+    padding: 80px 115px;
+}
+
+.titleCab {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 49px;
+    color: var(--primary-black);
+}
+
+.itemLinck {
+    color: var(--interface-text-1)
+}

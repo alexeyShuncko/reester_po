@@ -1,0 +1,61 @@
+.containerAuto{
+    padding: 80px 115px;
+}
+
+.formAuto {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+
+
+.titleAuto {
+margin-top: 20px;
+margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 49px;
+    color: var(--primary-black);
+}
+
+
+
+.linkAuto {
+text-decoration: underline;
+color: var(--primary-blue);
+font-weight: 500;
+font-size: 16px;
+line-height: 22px;
+letter-spacing: 0.01em;
+margin-bottom: 40px;
+}
+
+
+.buttonLinc {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    text-decoration-line: underline;
+
+    color: var(--primary-grey);
+}
+
+
+
+.akk {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    
+    color: var(--primary-grey);
+}
+
+.clickMe {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    text-decoration-line: underline;
+    color: var(--primary-blue);
+}

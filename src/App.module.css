@@ -155,7 +155,7 @@ header {
 
 
 .user {
-    flex: none;
+   margin-right: 20px;
     width: 52px;
     height: 48px;
 
@@ -164,20 +164,9 @@ header {
 
 }
 
-.userRoom {
-    flex: none;
-    width: 132px;
-    height: 22px;
-
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 22px;
-    color: var(--primary-grey);
-    background: none;
-    border: none;
+.arrow {
+margin-left: 20px;
 }
-
-
 
 
 

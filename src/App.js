@@ -6,18 +6,37 @@ import calendar from './image/calendar.svg'
 import item from './image/itemBlue.svg'
 import user from './image/user.svg'
 import arrow from './image/arrow.svg'
+import { Route, Routes, useNavigate } from 'react-router-dom';
+import Autorization from './components/autorize/Autorization';
+import { Button} from 'antd';
+import { connect } from 'react-redux';
+import Cabinet from './components/cabinet/Cabinet';
 
 
 
 
-function App() {
 
-  
+const  App =(props)=> {
+
+  let navigate = useNavigate()
+
+  const retMain = () => {
+    navigate('/')
+  }
+  const autorize = (e) => {
+if (e.target.innerHTML === 'Вход в аккаунт'){
+  navigate('/autorize')
+}
+  else {
+    navigate('/cabinet')
+  }  
+
+  }
 
   return (
     <>
       <header>
-        <img alt='' src={logo} className={s.logo}></img>
+        <img alt='' src={logo} className={s.logo} onClick={retMain}></img>
 
 
         <div className={s.search} >
@@ -36,15 +55,47 @@ function App() {
 
 
 
-          <img alt='' src={user} className={s.user}></img>
-          <button className={s.userRoom}> Вход в аккаунт</button>
-          <img alt='' src={arrow} className={s.arrow} ></img>
+{!props.reester.autorize
+          ?<Button className={s.userRoom} onClick={autorize} style={
+            {
+              width: 280,
+              height: 58,
+              border: 'none',
+              color: `var(--primary-grey)`,
+              fontWeight: '500',
+              fontSize: 16
+            }
+          }> <img alt='' src={user} className={s.user}></img>
+          
+          Вход в аккаунт
+           
+            <img alt='' src={arrow} className={s.arrow} ></img> </Button>
+            :<Button className={s.userRoom} onClick={autorize} style={
+            {
+              width: 280,
+              height: 58,
+              border: 'none',
+              color: `var(--primary-grey)`,
+              fontWeight: '500',
+              fontSize: 16
+            }
+          }> <img alt='' src={user} className={s.user}></img>
+          
+          {props.reester.users.name} {props.reester.users.famili}
+           
+            <img alt='' src={arrow} className={s.arrow} ></img> </Button>}
+
         </div>
 
 
 
       </header>
-      <Main />
+      <Routes>
+        <Route path='/' element={<Main />} />
+        <Route path='/autorize' element={<Autorization />} />
+        <Route path='/cabinet/*' element={<Cabinet />} />
+
+      </Routes>
       <footer>
         <div className={s.footerItem}>
           <div className={s.item1}>
@@ -78,8 +129,8 @@ function App() {
 
             </div>
             <div>
-            <div className={s.contact}>Контакты</div>
-            <div className={s.numTel}>+375 25 111 22 33 </div>
+              <div className={s.contact}>Контакты</div>
+              <div className={s.numTel}>+375 25 111 22 33 </div>
               <div className={s.numTel}>+375 29 222 44 55</div>
               <div className={s.numTel}>ReestrPO@mail.ru</div>
               <div className={s.numAdress}>220004 г. Минск, ул. Карла Маркса, 38</div>
@@ -98,4 +149,10 @@ function App() {
   );
 }
 
-export default App;
+let mapStateToProps = (state) => {
+  return {
+      reester: state.reester
+  }
+}
+
+export default connect(mapStateToProps,{})(App);
