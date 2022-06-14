@@ -1,17 +1,18 @@
 import s from './App.module.css';
 import Main from './components/main/Main';
 import logo from './image/Vector.png'
-import search from './image/search.png'
-import calendar from './image/calendar.png'
-import item from './image/item.svg'
-import user from './image/user.png'
-import arrow from './image/arrow.png'
+import search from './image/search.svg'
+import calendar from './image/calendar.svg'
+import item from './image/itemBlue.svg'
+import user from './image/user.svg'
+import arrow from './image/arrow.svg'
 
 
 
 
 function App() {
 
+  
 
   return (
     <>
@@ -21,7 +22,7 @@ function App() {
 
         <div className={s.search} >
           <img alt='' src={search} className={s.searchImg}></img>
-          <span>Поиск</span>
+          <input placeholder='Поиск' />
         </div>
 
         <div className={s.room}>
@@ -88,7 +89,7 @@ function App() {
 
         </div>
         <div className={s.lineFoo}></div>
-        <div className={s.copyr}>
+        <div className={s.copyr} >
           © Copyright 2022 — ОАО «РеестрПО». Все права защищены.
         </div>
       </footer>
