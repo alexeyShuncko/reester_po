@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/reester_po/static/css/main.62595c11.css",
+    "main.css": "/reester_po/static/css/main.41d0abc4.css",
     "main.js": "/reester_po/static/js/main.9343d4e7.js",
     "static/media/foto3.png": "/reester_po/static/media/foto3.820f188e86bb11dd6397.png",
     "static/media/im1.png": "/reester_po/static/media/im1.8bf2887564b7ce317958.png",
@@ -33,11 +33,11 @@
     "static/media/soderj.svg": "/reester_po/static/media/soderj.63154e410da655f0920783ca457d8130.svg",
     "static/media/ret.svg": "/reester_po/static/media/ret.73239088f4223b86390fa043994b15cf.svg",
     "static/media/plus.svg": "/reester_po/static/media/plus.26765eededd57abf6c2ac8ab993592fb.svg",
-    "main.62595c11.css.map": "/reester_po/static/css/main.62595c11.css.map",
+    "main.41d0abc4.css.map": "/reester_po/static/css/main.41d0abc4.css.map",
     "main.9343d4e7.js.map": "/reester_po/static/js/main.9343d4e7.js.map"
   },
   "entrypoints": [
-    "static/css/main.62595c11.css",
+    "static/css/main.41d0abc4.css",
     "static/js/main.9343d4e7.js"
   ]
 }
