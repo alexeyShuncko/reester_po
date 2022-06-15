@@ -1,11 +1,20 @@
+import dablArr from '../../../image/dablArr.svg'
+import s from './Table.module.css';
 
 import { Table } from "antd";
 
 
-
-
 const Table1 = (props) => {
 
+
+
+    setTimeout(()=> {
+        let t = document.getElementById('table11').style
+       t.color = '#4D4D4F'
+       t.fontSize = '16px'
+       t.fontWeight = '500'
+       t.lineHeight = '22px'
+    })
 
     const arr = [
         {
@@ -62,47 +71,58 @@ const Table1 = (props) => {
     ]
 
 
-
+    
     const columns = [
         {
-            title: ()=> <a href="a" style={{color: `var( --primary-blue)`}}>Регистрационный номер</a>,
+            title: ()=> <div style={{color: `var( --primary-blue)`, display:'flex'}}>
+                 <img alt='' src={dablArr} className={s.dablArr}></img>
+                Регистрационный номер</div>,
             dataIndex: 'number',
+            width: 180,
             key: 'key',
-            sorter: (a, b) => a.number.slice(0,2) - b.number.slice(1,b.length +1),
+           
           
         },
         {
-            title:()=> <a href="a" style={{color: `var( --primary-blue)`}}>Наименование програмного обеспечения</a>,
+            title:()=> <div style={{color: `var( --primary-blue)`,display:'flex'}}>
+                <img alt='' src={dablArr} className={s.dablArr}></img>
+                Наименование<br></br> програмного обеспечения</div>,
             dataIndex: 'name',
+            width: 280,
+            padding: 50,
             key: 'key',
-            sorter: (a, b) => a.name - b.name
+        
            
         },
         {
-            title:()=> <a href="a" style={{color: `var( --primary-blue)`}}>Код класса</a>,
+            title:()=> <div style={{color: `var( --primary-blue)`}}>Код<br></br> класса</div>,
             dataIndex: 'kod',
+            width: 100,
             key: 'key',
           
         },
         {
-            title: ()=> <a href="a" style={{color: `var( --primary-blue)`}}>Класс програмного обеспечения</a>,
+            title: ()=> <div style={{color: `var( --primary-blue)`}}>Класс програмного<br></br> обеспечения</div>,
             dataIndex: 'class',
+            width: 210,
             key: 'key',
            
         },
 
         {
-            title: ()=> <a href="a" style={{color: `var( --primary-blue)`}}>Дата регистрации</a>,
+            title: ()=> <div style={{color: `var( --primary-blue)`}}>Дата<br></br> регистрации</div>,
             dataIndex: 'date',
+            width: 170,
             key: 'key',
            
         },
         {
-            title: ()=> <a href="a" style={{color: `var( --primary-blue)`}}>Адресс сайта</a>,
+            title: ()=> <div style={{color: `var( --primary-blue)`}}>Адресс<br></br> сайта</div>,
             dataIndex: 'adress',
             key: 'key',
+            width: 100,
             render: (text, record, index) =>
-                <a  href='a' style={{ textDecoration: 'underline', color: `var( --primary-blue)`}}>{text}</a>
+                <a  href='ссылка' style={{ textDecoration: 'underline', color: `var( --primary-blue)`}}>{text}</a>
         },
 
     ]
@@ -117,7 +137,7 @@ const Table1 = (props) => {
                     columns={columns}
                     dataSource={data}
                     size="small"
-                   
+                    id='table11'
                     pagination={{
                         pageSize: '10',
                         position: ['bottomCenter']

@@ -8,6 +8,15 @@ import soderj from '../../../image/soderj.svg'
 const Document = (props) => {
 
 
+
+    setTimeout(() => {
+        let t = document.getElementById('table12').style
+        t.color = '#4D4D4F'
+        t.fontSize = '16px'
+        t.fontWeight = '500'
+        t.lineHeight = '22px'
+    })
+
     const arr = [
         {
             category: 'Общие документы', name: `Постановление Правительства Российской 
@@ -51,50 +60,43 @@ const Document = (props) => {
 
     const columns = [
         {
-            title: () => <a href="a" style={{ color: `var( --primary-blue)` }}>Категория</a>,
+            title: () => <div style={{ color: `var( --primary-blue)` }}>Категория</div>,
             dataIndex: 'category',
             key: 'key',
-            
-
-
         },
         {
-            title: () => <a href="a" style={{ color: `var( --primary-blue)` }}>Наименование</a>,
+            title: () => <div style={{ color: `var( --primary-blue)` }}>Наименование</div>,
             dataIndex: 'name',
             key: 'key',
             width: 400,
             render: (text, record, index) =>
-            <div style={{ marginRight: '60px' }}>
-               {text}
-            </div>
-
+                <div style={{ marginRight: '60px' }}>
+                    {text}
+                </div>
         },
         {
-            title: () => <a href="a" style={{ color: `var( --primary-blue)` }}>Дата</a>,
+            title: () => <div style={{ color: `var( --primary-blue)` }}>Дата</div>,
             dataIndex: 'date',
             key: 'key',
-
         },
         {
-            title: () => <a href="a" style={{ color: `var( --primary-blue)` }}>Номер</a>,
+            title: () => <div style={{ color: `var( --primary-blue)` }}>Номер</div>,
             dataIndex: 'number',
             key: 'key',
-
         },
         {
-            title: () => <a href="a" style={{ color: `var( --primary-blue)`, display: 'flex' }}> 
-             <img alt='' src={soderj} style={{  marginRight: '10px'}} ></img>
-            Содержание</a>,
+            title: () => <div style={{ color: `var( --primary-blue)`, display: 'flex' }}>
+                <img alt='' src={soderj} style={{ marginRight: '10px' }} ></img>
+                Содержание</div>,
             dataIndex: 'adress',
             key: 'key',
             render: (text, record, index) =>
                 <div style={{ display: 'flex' }}>
                     <img alt='' src={downArr} className={s.downArr}></img>
-                    <a href='a'
-                        style={{ textDecoration: 'underline', color: `var( --primary-blue)`,  marginLeft: '10px'}}>
-                            {text.slice(0,7)}<br></br> {text.slice(7,text.length + 1)}</a>
+                    <a href='ссылка'
+                        style={{ textDecoration: 'underline', color: `var( --primary-blue)`, marginLeft: '10px' }}>
+                        {text.slice(0, 7)}<br></br> {text.slice(7, text.length + 1)}</a>
                 </div>
-
         },
 
     ]
@@ -110,7 +112,7 @@ const Document = (props) => {
                 columns={columns}
                 dataSource={data}
                 size="small"
-
+                id='table12'
                 pagination={{
                     pageSize: '10',
                     position: ['none']

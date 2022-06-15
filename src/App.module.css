@@ -14,6 +14,7 @@ header {
     height: 40px;
     width: 170px;
     margin: 20px 0px 20px 115px;
+    cursor: pointer;
 }
 
 .search {
@@ -42,6 +43,7 @@ header {
 }
 
 .search input {
+    outline:none;
     width: 270px;
     height: 48px;
     background: var(--interface-search);
@@ -49,6 +51,12 @@ header {
     padding-left: 39px;
     border-radius: 5px;
 }
+
+
+.search input:hover {
+    border: 1px solid var(--primary-blue);
+}
+
 
 
 .search input::placeholder {
@@ -110,6 +118,7 @@ header {
     top: 0px;
     background: var(--interface-search);
     border-radius: 30px;
+ 
 
 }
 
@@ -119,6 +128,7 @@ header {
     height: 32px;
     left: calc(50% - 32px/2 - 103px);
     top: 8px;
+    cursor: pointer;
 }
 
 
@@ -126,7 +136,7 @@ header {
     position: absolute;
     width: 18px;
     height: 18px;
-    left: 98px;
+    left: 94px;
     top: 0px;
     background: var(--primary-blue);
 
@@ -146,7 +156,7 @@ header {
     height: 48px;
     background: var(--interface-search);
     border-radius: 3px;
-    margin-left: 136px;
+    margin-left: 110px;
     flex: none;
 }
 

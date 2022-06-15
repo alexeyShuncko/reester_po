@@ -21,21 +21,29 @@ const Cabinet = (props) => {
 
         <div className={s.containerCabinet}>
             <div className={s.titleCab}>Личный кабинет</div>
-            <div style={{display: 'flex'}}>
-            <NavCabinet />
-            <Routes>
-        <Route path='/' element={<MyData />} />
-        <Route path='/notifications' element={<Notifications />} />
-        <Route path='/reestrs' element={<Reestrs />} />
-        <Route path='/metaData' element={<MetaData />} />
-        <Route path='/security' element={<Security />} />
-        <Route path='/downloads' element={<Downloads />} />
+            <div style={{ display: 'flex' }}>
+                <NavCabinet
+                 updateNot={props.updateNot} 
+                    setSelect={props.setSelect}
+                    addAut={props.addAut}
+                    select={props.select} />
+                <Routes>
+                    <Route path='/' element={<MyData
+                    foto={props.foto}
+                        users={props.users}
+                        addUsers={props.addUsers}
+                        updateNot={props.updateNot} />} />
+                    <Route path='/notifications' element={<Notifications notifications={props.notifications} />} />
+                    <Route path='/reestrs' element={<Reestrs />} />
+                    <Route path='/metaData' element={<MetaData />} />
+                    <Route path='/security' element={<Security />} />
+                    <Route path='/downloads' element={<Downloads />} />
 
-      </Routes>
+                </Routes>
             </div>
-            
+
         </div>
-        
+
 
     )
 }

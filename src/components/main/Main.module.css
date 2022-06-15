@@ -1,33 +1,27 @@
 
-
-
 .mainItem1 {
     display: flex;
     align-items: center;
     padding: 80px 115px;
     gap: 215px;
     background: var(--interface-fon);
-
-
 }
-.mainItem3 {
-  
-  
-padding: 80px 115px;
 
+.mainItem3 {
+padding: 80px 115px;
 background: var(--interface-fon);
 }
+
 .im1 {
     width: 505px;
     height: 502px;
-    /* flex: none;
-    order: 1;
-    flex-grow: 0; */
+    margin-top: 80px;
+    margin-right: 115px;
+    
 }
 .reestr {
     width: 450px;
     height: 198px;
-  
     font-weight: 700;
     font-size: 48px;
     line-height: 66px;
@@ -40,9 +34,7 @@ background: var(--interface-fon);
 }
 
 
-
 .title {
-
     width: 404px;
     height: 54px;
     font-weight: 500;
@@ -80,7 +72,7 @@ background: var(--interface-fon);
 }
 
 .inpBut input {
-
+    outline:none;
     width: 330px;
     height: 56px;
     background: var(--primary-white);
@@ -90,6 +82,9 @@ background: var(--interface-fon);
 
 }
 
+.inpBut input:hover {
+    border: 1px solid var(--primary-blue);
+}
 
 .inpBut input::placeholder {
     width: 118px;
@@ -108,7 +103,7 @@ background: var(--interface-fon);
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     border: none;
-
+    cursor: pointer;
 
     font-weight: 700;
     font-size: 18px;
@@ -117,6 +112,13 @@ background: var(--interface-fon);
     color: var(--primary-white);
 
 
+}
+
+.inpBut button:hover {
+    background: #01B8D4;
+}
+.inpBut button:active {
+    background: #01BEDB;
 }
 
 .searchImg {
@@ -151,6 +153,7 @@ background: var(--interface-fon);
 display: flex;
 justify-content: flex-end;
 align-items: center;
+margin-bottom: 40px;
 
 }
 
@@ -186,6 +189,13 @@ font-size: 18px;
 line-height: 25px;
 letter-spacing: 0.01em;
 color: var(--primary-white);
+cursor: pointer;
+}
+.butNews:hover {
+    background: #01B8D4;
+}
+.butNews:active {
+    background: #01BEDB;
 }
 
 .qqq {

@@ -13,7 +13,7 @@ const [edit, setEdit] = useState(false)
        
         
         if (edit) {
-            document.getElementById('plus').style.transform =  'rotate(180deg)'
+            document.getElementById('plus').style.transform =  ''
             setEdit(false)
         }
         else {
@@ -46,7 +46,7 @@ const [edit, setEdit] = useState(false)
                    
                         <div className={s.questionListItem} >
                         <img alt='' src={plus} className={s.plus} id='plus' 
-                        style={{ marginRight: '10px' }} 
+                        style={{ marginRight: '10px', cursor: 'pointer' }} 
                         onClick={plusRotaite}></img>
                       Для подачи заявления необходимо подготовить
                         {
@@ -72,7 +72,7 @@ const [edit, setEdit] = useState(false)
                    
                 {arr.map(a=> {
                     return (
-                        <div className={s.questionListItem} key={a.name}>
+                        <div className={s.questionListItem1} key={a.name}>
                         <img alt='' src={plus}   style={{ marginRight: '10px' }}></img>
                        {a.name}
                     </div>

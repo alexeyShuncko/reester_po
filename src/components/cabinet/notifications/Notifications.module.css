@@ -1,12 +1,23 @@
-.containerCabinet{
-    padding: 80px 115px;
+.containerNot {
+    margin-left: 130px;
+    display: flex;
+    flex-direction: column;
+    
+    
 }
 
-.titleCab {
-    margin-top: 80px;
-    margin-bottom: 40px;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 49px;
-    color: var(--primary-black);
+
+.notItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+    height: 56px;
+    margin-bottom: 20px;
+    color: var(--primary-grey);
+    background: #F6F6F9;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
 }

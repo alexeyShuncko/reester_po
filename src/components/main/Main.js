@@ -1,5 +1,5 @@
 import s from './Main.module.css';
-import im1 from '../../image/im1.svg'
+import im1 from '../../image/im1.png'
 import search from '../../image/search.svg'
 import voronka from '../../image/voronka.svg'
 import group from '../../image/group.svg'
@@ -7,15 +7,21 @@ import Table1 from './Table/Table';
 import News from './News/News';
 import Document from './Document/Document';
 import Question from './Question/Question';
+import { useState } from 'react';
 
 
 
 
 const Main = (props) => {
 
-
+    const [edit, setEdit] = useState(false)
    
-
+    const newsEdit =()=> {
+        setEdit(true)
+    }
+     const newsEditFalse =()=> {
+        setEdit(false)
+    }
 
     const buttonMess = () => {
         alert(`Вы нажали "Искать" ...`)
@@ -54,9 +60,12 @@ const Main = (props) => {
                
             <div className={s.mainItem3}>
                 <div className={s.newsTitle}>Новости реестра</div> 
-                <News />
+                <News edit={edit}/>
                 <div className={s.qqq}>
-                <button className={s.butNews}>Показать все</button>
+                {!edit
+                    ?<button className={s.butNews} onClick={newsEdit}>Показать все</button>
+                    :<button className={s.butNews} onClick={newsEditFalse}>Убрать</button>
+                }
                 </div>
              
                 </div>

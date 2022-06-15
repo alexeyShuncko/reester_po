@@ -4,34 +4,45 @@ import logo from './image/Vector.png'
 import search from './image/search.svg'
 import calendar from './image/calendar.svg'
 import item from './image/itemBlue.svg'
+import itemGrey from './image/item.svg'
+
 import user from './image/user.svg'
 import arrow from './image/arrow.svg'
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import Autorization from './components/autorize/Autorization';
-import { Button} from 'antd';
+import { Button } from 'antd';
 import { connect } from 'react-redux';
 import Cabinet from './components/cabinet/Cabinet';
+import { useState } from 'react';
+
+import { addAut, addUsers, updateNot } from './Redux/reesterReducer'
 
 
 
+const App = (props) => {
 
-
-const  App =(props)=> {
-
+  const [select, setSelect] = useState('Мои данные')
   let navigate = useNavigate()
 
   const retMain = () => {
     navigate('/')
   }
   const autorize = (e) => {
-if (e.target.innerHTML === 'Вход в аккаунт'){
-  navigate('/autorize')
-}
-  else {
-    navigate('/cabinet')
-  }  
-
+    if (e.target.innerHTML === 'Вход в аккаунт') {
+      navigate('/autorize')
+    }
+    else {
+      navigate('/cabinet/')
+      setSelect('Мои данные')
+    }
   }
+
+  const redirect = () => {
+      navigate('/cabinet/notifications')
+      setSelect('Уведомления')
+  }
+
+
 
   return (
     <>
@@ -47,43 +58,55 @@ if (e.target.innerHTML === 'Вход в аккаунт'){
         <div className={s.room}>
           <div className={s.calendar}></div>
           <img alt='' src={calendar} className={s.calendarImg} ></img>
-          <div className={s.item}> </div>
-          <img alt='' src={item} className={s.itemImg} ></img>
+          {!props.reester.autorize
+            ? <div >
+              <div className={s.item}> </div>
+              <img alt='' src={itemGrey}  className={s.itemImg} ></img>
+            </div>
 
-          <span className={s.num}>4</span>
+            : <div>
+              <div className={s.item}> </div>
+              <img alt='' src={item} onClick={redirect} className={s.itemImg} ></img>
+              <span className={s.num}>{props.reester.notifications.length}</span>
+            </div>
+
+          }
+
           <div className={s.line}></div>
 
 
 
-{!props.reester.autorize
-          ?<Button className={s.userRoom} onClick={autorize} style={
-            {
-              width: 280,
-              height: 58,
-              border: 'none',
-              color: `var(--primary-grey)`,
-              fontWeight: '500',
-              fontSize: 16
-            }
-          }> <img alt='' src={user} className={s.user}></img>
-          
-          Вход в аккаунт
-           
-            <img alt='' src={arrow} className={s.arrow} ></img> </Button>
-            :<Button className={s.userRoom} onClick={autorize} style={
-            {
-              width: 280,
-              height: 58,
-              border: 'none',
-              color: `var(--primary-grey)`,
-              fontWeight: '500',
-              fontSize: 16
-            }
-          }> <img alt='' src={user} className={s.user}></img>
-          
-          {props.reester.users.name} {props.reester.users.famili}
-           
-            <img alt='' src={arrow} className={s.arrow} ></img> </Button>}
+          {!props.reester.autorize
+            ? <Button className={s.userRoom} onClick={autorize} style={
+              {
+                width: 280,
+                height: 58,
+                border: 'none',
+                color: `var(--primary-grey)`,
+                fontWeight: '500',
+                fontSize: 16,
+                boxShadow: 'none'
+              }
+            }> <img alt='' src={user} className={s.user}></img>
+
+              Вход в аккаунт
+
+              <img alt='' src={arrow} className={s.arrow} ></img> </Button>
+            : <Button className={s.userRoom} onClick={autorize} style={
+              {
+                width: 280,
+                height: 58,
+                border: 'none',
+                color: `var(--primary-grey)`,
+                fontWeight: '500',
+                fontSize: 16,
+                boxShadow: 'none'
+              }
+            }> <img alt='' src={props.reester.foto} className={s.user}></img>
+
+              {props.reester.users.name} {props.reester.users.famili}
+
+              <img alt='' src={arrow} className={s.arrow} ></img> </Button>}
 
         </div>
 
@@ -92,8 +115,19 @@ if (e.target.innerHTML === 'Вход в аккаунт'){
       </header>
       <Routes>
         <Route path='/' element={<Main />} />
-        <Route path='/autorize' element={<Autorization />} />
-        <Route path='/cabinet/*' element={<Cabinet />} />
+        <Route path='/autorize' element={<Autorization 
+        users={props.reester.users}
+        updateNot={props.updateNot} 
+        addAut={props.addAut} />} />
+        <Route path='/cabinet/*' element={<Cabinet
+          updateNot={props.updateNot}
+          notifications={props.reester.notifications}
+          addUsers={props.addUsers}
+          users={props.reester.users}
+          foto={props.reester.foto}
+          addAut={props.addAut}
+          setSelect={setSelect}
+          select={select} />} />
 
       </Routes>
       <footer>
@@ -134,7 +168,7 @@ if (e.target.innerHTML === 'Вход в аккаунт'){
               <div className={s.numTel}>+375 29 222 44 55</div>
               <div className={s.numTel}>ReestrPO@mail.ru</div>
               <div className={s.numAdress}>220004 г. Минск, ул. Карла Маркса, 38</div>
-              <div className={s.linkContact}>Связаться с поддержкой</div>
+              <a href='a' className={s.linkContact}>Связаться с поддержкой</a>
             </div>
           </div>
 
@@ -151,8 +185,8 @@ if (e.target.innerHTML === 'Вход в аккаунт'){
 
 let mapStateToProps = (state) => {
   return {
-      reester: state.reester
+    reester: state.reester
   }
 }
 
-export default connect(mapStateToProps,{})(App);
+export default connect(mapStateToProps, { addAut, addUsers, updateNot })(App);

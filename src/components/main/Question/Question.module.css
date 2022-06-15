@@ -21,7 +21,20 @@
 
 
 .questionListItem {
+   
+    
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    
+    
+    color: var(--primary-grey);
+    margin-bottom: 23.5px;
+    }
+    
 
+.questionListItem1 {
+display: flex;
 
 font-weight: 700;
 font-size: 18px;
