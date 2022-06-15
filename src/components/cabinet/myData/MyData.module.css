@@ -103,6 +103,7 @@
     line-height: 22px;
     color: var(--primary-white);
     border: none;
+    cursor: pointer;
 
 }
 .butMy:hover {

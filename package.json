@@ -1,8 +1,9 @@
 {
-  "homepage": "https://alexeyshuncko.github.io/reester_po",
+  
   "name": "reestr",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://alexeyshuncko.github.io/reester_po",
   "dependencies": {
     "antd": "^4.21.1",
     "cra-template": "1.2.0",
