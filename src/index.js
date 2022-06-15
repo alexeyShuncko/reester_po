@@ -5,7 +5,7 @@ import App from './App';
 import 'antd/dist/antd.min.css'
 import locale from 'antd/lib/locale/ru_RU';
 import { ConfigProvider } from 'antd';
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { Provider } from 'react-redux'
 import store from './Redux/redux-store';
 
@@ -13,7 +13,7 @@ import store from './Redux/redux-store';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
-  <BrowserRouter>
+  <HashRouter>
     <React.StrictMode>
       <ConfigProvider locale={locale}>
       <Provider store={store}>
@@ -22,7 +22,7 @@ root.render(
       </ConfigProvider>
 
     </React.StrictMode>
-  </BrowserRouter>
+  </HashRouter>
 
 );
 
