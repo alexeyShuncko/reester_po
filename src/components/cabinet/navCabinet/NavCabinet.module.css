@@ -15,6 +15,7 @@
 
 
 .navDiv {
+    outline: none;
     width: 270px;
     height: 72px;
     color: var(--interface-text-1) ;
@@ -31,6 +32,10 @@
     color: var(--primary-blue);
     border: 1px solid var(--primary-blue);
 }
+.navDiv:hover *{
+    fill: var(--primary-blue)
+}
+
 
 
 .navActive {
@@ -46,3 +51,17 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
+
+.svg {
+    margin-right: 20px;
+    fill: var(--interface-text-1)
+}
+
+
+
+.logoSvg {
+    margin-right: 20px;
+    fill: var(--primary-blue)
+}
+

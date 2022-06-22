@@ -1,17 +1,15 @@
 
 import s from './NavCabinet.module.css';
 import { NavLink } from 'react-router-dom';
-import coll from '../../../image/item.svg'
-import collb from '../../../image/itemBlue.svg'
-import reestr from '../../../image/reestr.svg'
-import myb from '../../../image/myb.svg'
-import my from '../../../image/my.svg'
-import meta from '../../../image/meta.svg'
-import close from '../../../image/close.svg'
-import arr from '../../../image/arrDo.svg'
-import downArr from '../../../image/arrow.svg'
 
-import exit from '../../../image/exit.svg'
+import { ReactComponent as Coll } from '../../../image/item.svg'
+import { ReactComponent as Reestr } from '../../../image/reestr.svg'
+import { ReactComponent as My } from '../../../image/my.svg'
+import { ReactComponent as Meta } from '../../../image/meta.svg'
+import { ReactComponent as Secur } from '../../../image/close.svg'
+import { ReactComponent as Load } from '../../../image/arrDo.svg'
+import { ReactComponent as Exit } from '../../../image/exit.svg'
+
 import { useEffect } from 'react';
 import { DateFunc } from '../../help/DateFunc';
 
@@ -27,13 +25,28 @@ const NavCabinet = (props) => {
    
 
     let settingArr = [
-        { name: 'Мои данные', path: '/cabinet/', img: my, imgBlue: myb },
-        { name: 'Уведомления', path: '/cabinet/notifications', img: coll,imgBlue: collb },
-        { name: 'Реестры', path: '/cabinet/reestrs', img: reestr, imgBlue: downArr },
-        { name: 'Метаданные', path: '/cabinet/metaData', img: meta, imgBlue: downArr },
-        { name: 'Безопасность', path: '/cabinet/security', img: close, imgBlue: downArr },
-        { name: 'Мои загрузки', path: '/cabinet/downloads', img: arr, imgBlue: downArr },
-        { name: 'Выход', path: '/', img: exit },
+        { name: 'Мои данные', path: '/cabinet/', 
+        img: <My className={s.svg} />, 
+        imgBlue:<My className={s.logoSvg} /> },
+        { name: 'Уведомления', path: '/cabinet/notifications', 
+        img: <Coll className={s.svg} />,
+        imgBlue: <Coll className={s.logoSvg} /> },
+        { name: 'Реестры', path: '/cabinet/reestrs', 
+        img:  <Reestr className={s.svg} />,
+        imgBlue: <Reestr className={s.logoSvg} />  },
+        { name: 'Метаданные', path: '/cabinet/metaData', 
+        img: <Meta className={s.svg} />, 
+        imgBlue: <Meta className={s.logoSvg}/> },
+        { name: 'Безопасность', path: '/cabinet/security', 
+        img: <Secur className={s.svg}/>, 
+        imgBlue: <Secur className={s.logoSvg}/> },
+        { name: 'Мои загрузки', path: '/cabinet/downloads', 
+        img: <Load className={s.svg}/>, 
+        imgBlue: <Load className={s.logoSvg}/> },
+        { name: 'Выход', path: '/', 
+        img: <Exit  style={{fill: `var(--second-red)`,marginRight: '20px'}}/>,
+        imgBlue: <Exit /> },
+        
     ]
 
 
@@ -61,10 +74,12 @@ const NavCabinet = (props) => {
                             className={ props.select === a.name ? s.navActive : s.navDiv}>
 
                                 <div style={{ display: 'flex' }} >
-                                    <img alt='' src={
-                                        props.select !== a.name ? a.img : a.imgBlue
+                                    {
+                                         props.select !== a.name
+                                         ? a.img
+                                         : a.imgBlue 
                                     }
-                                        style={{ marginRight: '20px', }} ></img>
+                                   
                                     {a.name === 'Выход'
                                         ? <span 
                                             style={{

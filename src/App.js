@@ -3,9 +3,7 @@ import Main from './components/main/Main';
 import logo from './image/Vector.png'
 import search from './image/search.svg'
 import calendar from './image/calendar.svg'
-import item from './image/itemBlue.svg'
-import itemGrey from './image/item.svg'
-
+import { ReactComponent as  ItemGrey} from "./image/item.svg";
 import user from './image/user.svg'
 import arrow from './image/arrow.svg'
 import { Route, Routes, useNavigate } from 'react-router-dom';
@@ -61,12 +59,12 @@ const App = (props) => {
           {!props.reester.autorize
             ? <div >
               <div className={s.item}> </div>
-              <img alt='' src={itemGrey}  className={s.itemImg} ></img>
+              <ItemGrey  className={s.itemImg} />
             </div>
 
             : <div>
               <div className={s.item}> </div>
-              <img alt='' src={item} onClick={redirect} className={s.itemImg} ></img>
+              <ItemGrey  style={{fill: 'var(--primary-blue)'}} onClick={redirect} className={s.itemImg} />
               <span className={s.num}>{props.reester.notifications.length}</span>
             </div>
 

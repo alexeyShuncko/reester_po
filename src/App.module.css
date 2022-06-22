@@ -129,6 +129,7 @@ header {
     left: calc(50% - 32px/2 - 103px);
     top: 8px;
     cursor: pointer;
+    fill: var(--interface-text-1);
 }
 
 
