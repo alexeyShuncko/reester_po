@@ -11,13 +11,14 @@ const [edit, setEdit] = useState(false)
 
     const plusRotaite =(e)=> {
        
-        
+        let el = document.getElementById('plus')
         if (edit) {
-            document.getElementById('plus').style.transform =  ''
+            el.classList.remove(s.active)
             setEdit(false)
         }
         else {
-            document.getElementById('plus').style.transform =  'rotate(45deg)'
+           
+            el.classList.add(s.active)
             setEdit(true)
         }
 
