@@ -1,11 +1,9 @@
 .docTitle {
     width: 220px;
     height: 50px;
- 
     font-weight: 700;
     font-size: 36px;
     line-height: 49px;
-    
     color: var(--primary-black);
     margin-bottom: 10px;
 }
@@ -13,7 +11,6 @@
 .docSubTitle {
     width: 190px;
     height: 25px;
-
     font-weight: 500;
     font-size: 18px;
     line-height: 25px;

@@ -1,23 +1,22 @@
 import s from './Document.module.css';
-import { Table } from "antd";
+import { Table } from 'antd';
 import downArr from '../../../image/downArr.svg'
 import soderj from '../../../image/soderj.svg'
+import { useLayoutEffect } from 'react';
 
 
 
 const Document = (props) => {
 
-
-
-    setTimeout(() => {
+    useLayoutEffect(() => {
         let t = document.getElementById('table12').style
         t.color = '#4D4D4F'
         t.fontSize = '16px'
         t.fontWeight = '500'
         t.lineHeight = '22px'
-    })
+    },[])
 
-    const arr = [
+    const data = [
         {
             category: 'Общие документы', name: `Постановление Правительства Российской 
             Федерации от 20.07.2021 "О внесении 
@@ -52,21 +51,16 @@ const Document = (props) => {
         },
     ]
 
-
-
     const columns = [
         {
             title: () => <div style={{ color: `var( --primary-blue)` }}>Категория</div>,
-            dataIndex: 'category', 
+            dataIndex: 'category',
         },
         {
             title: () => <div style={{ color: `var( --primary-blue)` }}>Наименование</div>,
             dataIndex: 'name',
             width: 400,
-            render: (text, record, index) =>
-                <div style={{ marginRight: '60px' }}>
-                    {text}
-                </div>
+            render: (text, record, index) => <div style={{ marginRight: '60px' }}>{text}</div>
         },
         {
             title: () => <div style={{ color: `var( --primary-blue)` }}>Дата</div>,
@@ -78,22 +72,18 @@ const Document = (props) => {
         },
         {
             title: () => <div style={{ color: `var( --primary-blue)`, display: 'flex' }}>
-                <img alt='' src={soderj} style={{ marginRight: '10px' }} ></img>
+                <img alt='Содержание' src={soderj} style={{ marginRight: '10px' }} />
                 Содержание</div>,
             dataIndex: 'adress',
             render: (text, record, index) =>
                 <div style={{ display: 'flex' }}>
-                    <img alt='' src={downArr} className={s.downArr}></img>
-                    <a href='ссылка'
-                        style={{ textDecoration: 'underline', color: `var( --primary-blue)`, marginLeft: '10px' }}>
-                        {text.slice(0, 7)}<br></br> {text.slice(7, text.length + 1)}</a>
+                    <img alt='Стрелка' src={downArr} className={s.downArr} />
+                    <a href='/'
+                        style={{ textDecoration: 'underline', color: `var( --primary-blue)`, marginLeft: '10px'}}>
+                        {text.slice(0, 7)}<br /> {text.slice(7, text.length + 1)}</a>
                 </div>
         },
-
     ]
-    const data = arr
-
-
 
     return (
         <>
@@ -110,9 +100,6 @@ const Document = (props) => {
                 }}
             />
         </>
-
-
-
     )
 }
 

@@ -3,7 +3,7 @@ import Main from './components/main/Main';
 import logo from './image/Vector.png'
 import search from './image/search.svg'
 import calendar from './image/calendar.svg'
-import { ReactComponent as  ItemGrey} from "./image/item.svg";
+import { ReactComponent as ItemGrey } from './image/item.svg';
 import user from './image/user.svg'
 import arrow from './image/arrow.svg'
 import { Route, Routes, useNavigate } from 'react-router-dom';
@@ -12,7 +12,6 @@ import { Button } from 'antd';
 import { connect } from 'react-redux';
 import Cabinet from './components/cabinet/Cabinet';
 import { useState } from 'react';
-
 import { addAut, addUsers, updateNot } from './Redux/reesterReducer'
 
 
@@ -37,8 +36,8 @@ const App = (props) => {
   }
 
   const redirect = () => {
-      navigate('/cabinet/notifications')
-      setSelect('Уведомления')
+    navigate('/cabinet/notifications')
+    setSelect('Уведомления')
   }
 
 
@@ -46,78 +45,65 @@ const App = (props) => {
   return (
     <>
       <header>
-        <img alt='' src={logo} className={s.logo} onClick={retMain}></img>
+        <img alt='Логотип' src={logo} className={s.logo} onClick={retMain} />
 
 
         <div className={s.search} >
-          <img alt='' src={search} className={s.searchImg}></img>
+          <img alt='Поиск' src={search} className={s.searchImg} />
           <input placeholder='Поиск' />
         </div>
 
         <div className={s.room}>
           <div className={s.calendar}></div>
-          <img alt='' src={calendar} className={s.calendarImg} ></img>
+          <img alt='Календарь' src={calendar} className={s.calendarImg} />
           {!props.reester.autorize
             ? <div >
               <div className={s.item}> </div>
-              <ItemGrey  className={s.itemImg} />
+              <ItemGrey className={s.itemImg} />
             </div>
-
             : <div>
               <div className={s.item}> </div>
-              <ItemGrey  style={{fill: 'var(--primary-blue)'}} onClick={redirect} className={s.itemImg} />
+              <ItemGrey style={{ fill: 'var(--primary-blue)' }} onClick={redirect} className={s.itemImg} />
               <span className={s.num}>{props.reester.notifications.length}</span>
             </div>
-
           }
-
           <div className={s.line}></div>
-
-
-
           {!props.reester.autorize
             ? <Button className={s.userRoom} onClick={autorize} style={
-              {
-                width: 280,
+              { width: 280,
                 height: 58,
                 border: 'none',
                 color: `var(--primary-grey)`,
                 fontWeight: '500',
                 fontSize: 16,
-                boxShadow: 'none'
-              }
-            }> <img alt='' src={user} className={s.user}></img>
-
+                boxShadow: 'none'}
+            }> 
+            <img alt='Пользователь' src={user} className={s.user} />
               Вход в аккаунт
-
-              <img alt='' src={arrow} className={s.arrow} ></img> </Button>
+              <img alt='Стрелка' src={arrow} className={s.arrow} />
+            </Button>
             : <Button className={s.userRoom} onClick={autorize} style={
-              {
-                width: 280,
+              { width: 280,
                 height: 58,
                 border: 'none',
                 color: `var(--primary-grey)`,
                 fontWeight: '500',
                 fontSize: 16,
-                boxShadow: 'none'
-              }
-            }> <img alt='' src={props.reester.foto} className={s.user}></img>
-
+                boxShadow: 'none' }
+            }> 
+            <img alt='Пользователь' src={props.reester.foto} className={s.user} />
               {props.reester.users.name} {props.reester.users.famili}
-
-              <img alt='' src={arrow} className={s.arrow} ></img> </Button>}
-
+              <img alt='Стрелка' src={arrow} className={s.arrow} />
+            </Button>}
         </div>
-
-
-
       </header>
+
       <Routes>
         <Route path='/' element={<Main />} />
-        <Route path='/autorize' element={<Autorization 
-        users={props.reester.users}
-        updateNot={props.updateNot} 
-        addAut={props.addAut} />} />
+        <Route path='/autorize' element={<Autorization
+          users={props.reester.users}
+          updateNot={props.updateNot}
+          addAut={props.addAut} />} />
         <Route path='/cabinet/*' element={<Cabinet
           updateNot={props.updateNot}
           notifications={props.reester.notifications}
@@ -127,13 +113,13 @@ const App = (props) => {
           addAut={props.addAut}
           setSelect={setSelect}
           select={select} />} />
-
       </Routes>
+
       <footer>
         <div className={s.footerItem}>
           <div className={s.item1}>
             <div className={s.item1_1}>
-              <img alt='' src={logo} style={{ marginBottom: '20px' }}></img>
+              <img alt='Логотип' src={logo} style={{ marginBottom: '20px' }} />
               <div className={s.text1}>Открытое акционерное общество
                 «Реестр ПО» начало практическую
                 деятельность с 1 марта 2014г</div>
@@ -148,9 +134,7 @@ const App = (props) => {
               <div className={s.informItem}>Документы</div>
               <div className={s.informItem}>Вопросы</div>
             </div>
-
           </div>
-
           <div className={s.item2}>
             <div>
               <div className={s.tehhelp}>Техническая поддержка</div>
@@ -159,7 +143,6 @@ const App = (props) => {
               <div className={s.numTel}>+375 25 111 22 33 </div>
               <div className={s.numTel}>+375 29 222 44 55</div>
               <div className={s.numTel}>ReestrPOsupport@mail.ru</div>
-
             </div>
             <div>
               <div className={s.contact}>Контакты</div>
@@ -167,10 +150,9 @@ const App = (props) => {
               <div className={s.numTel}>+375 29 222 44 55</div>
               <div className={s.numTel}>ReestrPO@mail.ru</div>
               <div className={s.numAdress}>220004 г. Минск, ул. Карла Маркса, 38</div>
-              <a href='a' className={s.linkContact}>Связаться с поддержкой</a>
+              <a href='/' className={s.linkContact}>Связаться с поддержкой</a>
             </div>
           </div>
-
         </div>
         <div className={s.lineFoo}></div>
         <div className={s.copyr} >
@@ -178,7 +160,6 @@ const App = (props) => {
         </div>
       </footer>
     </>
-
   );
 }
 

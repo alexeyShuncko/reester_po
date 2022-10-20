@@ -1,5 +1,4 @@
 .docTitle {
-
     width: 220px;
     height: 50px;
     font-weight: 700;
@@ -51,11 +50,12 @@
     transition: 0.5s;
     border-radius: 50%;
 }
+
 .plus:hover {
-   box-shadow: 0 0 15px 0 var(--primary-blue);
+    box-shadow: 0 0 15px 0 var(--primary-blue);
     transition: 0.5s;
 }
 
 .plus.active {
-transform: rotate(135deg);
+    transform: rotate(135deg);
 }

@@ -17,5 +17,5 @@ export const DateFunc = (date) => {
     let MM = date.getMinutes();
     if (MM < 10) MM = '0' + MM;
 
-    return     dd + '-' + mm + '-20' + yy + ' в ' + HH + ':' + MM;
+    return dd + '-' + mm + '-20' + yy + ' в ' + HH + ':' + MM;
 }
