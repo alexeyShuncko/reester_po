@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/reester_po/static/css/main.d3dded4d.css",
-    "main.js": "/reester_po/static/js/main.07e224ef.js",
+    "main.css": "/reester_po/static/css/main.f87c8220.css",
+    "main.js": "/reester_po/static/js/main.4c780d2e.js",
     "static/media/foto3.png": "/reester_po/static/media/foto3.820f188e86bb11dd6397.png",
     "static/media/im1.png": "/reester_po/static/media/im1.8bf2887564b7ce317958.png",
     "static/media/foto2.png": "/reester_po/static/media/foto2.fe8d0f352ea2306579c1.png",
@@ -25,17 +25,17 @@
     "static/media/reestr.svg": "/reester_po/static/media/reestr.9b4538842f0dc830155577148319927b.svg",
     "static/media/downArr.svg": "/reester_po/static/media/downArr.6b31378b4b7b002a5dfe67acf4af33ad.svg",
     "static/media/close.svg": "/reester_po/static/media/close.05a2202a835a12dd79ca2e1e2c56978a.svg",
-    "index.html": "/reester_po/index.html",
     "static/media/group.svg": "/reester_po/static/media/group.86db40ce2105a72c560d39adc0a590c0.svg",
     "static/media/meta.svg": "/reester_po/static/media/meta.b6cb5d7ef81a0c48cd534b2a60fac12c.svg",
     "static/media/soderj.svg": "/reester_po/static/media/soderj.63154e410da655f0920783ca457d8130.svg",
+    "index.html": "/reester_po/index.html",
     "static/media/ret.svg": "/reester_po/static/media/ret.73239088f4223b86390fa043994b15cf.svg",
     "static/media/plus.svg": "/reester_po/static/media/plus.26765eededd57abf6c2ac8ab993592fb.svg",
-    "main.d3dded4d.css.map": "/reester_po/static/css/main.d3dded4d.css.map",
-    "main.07e224ef.js.map": "/reester_po/static/js/main.07e224ef.js.map"
+    "main.f87c8220.css.map": "/reester_po/static/css/main.f87c8220.css.map",
+    "main.4c780d2e.js.map": "/reester_po/static/js/main.4c780d2e.js.map"
   },
   "entrypoints": [
-    "static/css/main.d3dded4d.css",
-    "static/js/main.07e224ef.js"
+    "static/css/main.f87c8220.css",
+    "static/js/main.4c780d2e.js"
   ]
 }
