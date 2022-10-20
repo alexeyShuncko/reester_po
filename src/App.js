@@ -26,7 +26,8 @@ const App = (props) => {
     navigate('/')
   }
   const autorize = (e) => {
-    if (e.target.innerHTML === 'Вход в аккаунт') {
+
+    if (e.currentTarget.innerHTML.includes('Вход в аккаунт')) {
       navigate('/autorize')
     }
     else {

@@ -23,37 +23,33 @@ const Document = (props) => {
             Федерации от 20.07.2021 "О внесении 
             изменений в постановление Правительства 
             Российской Федерации от 16 ноября 2015 г. 
-            № 1236"`, date: '20.07.2021', number: '1226', adress: `Скачать (469 Кб)`, кеу: '1'
+            № 1236"`, date: '20.07.2021', number: '1226', adress: `Скачать (469 Кб)`, key: '1'
         },
         {
             category: 'Общие документы', name: `Приказ №486 от 22.09.2020 Об утверждении 
             классификатора программ для электронных 
             вычислительных машин и баз данных`, date: '22.09.2020', number: '468',
-            adress: `Скачать(10.81 Мб)`, кеу: '2'
+            adress: `Скачать(10.81 Мб)`, key: '2'
         },
 
         {
             category: 'Общие документы', name: `Административный регламент ПРИКАЗ 
             от 21 февраля 2019 года N62`, date: '21.02.2019', number: '468',
-            adress: `Скачать(10.81 Мб)`, кеу: '3'
+            adress: `Скачать(10.81 Мб)`, key: '3'
         },
         {
             category: 'Общие документы', name: `Постановление Правительства РФ 
             от 20.12.2017 № 1594 "О внесении изменений 
             в постановление Правительства Российской 
             Федерации от 16 ноября 2015 г. № 1236"`, date: '20.12.2017', number: '1594',
-            adress: `Скачать(2.07 Мб)`, кеу: '4'
+            adress: `Скачать(2.07 Мб)`, key: '4'
         },
         {
             category: 'Общие документы', name: `Об утверждении правил применения 
             классификатора программ для электронных 
             вычислительных машин и баз данных`, date: '31.12.2015', number: '622',
-            adress: `Скачать(4.69 Мб)`, кеу: '5'
+            adress: `Скачать(4.69 Мб)`, key: '5'
         },
-
-
-
-
     ]
 
 
@@ -61,13 +57,11 @@ const Document = (props) => {
     const columns = [
         {
             title: () => <div style={{ color: `var( --primary-blue)` }}>Категория</div>,
-            dataIndex: 'category',
-            key: 'key',
+            dataIndex: 'category', 
         },
         {
             title: () => <div style={{ color: `var( --primary-blue)` }}>Наименование</div>,
             dataIndex: 'name',
-            key: 'key',
             width: 400,
             render: (text, record, index) =>
                 <div style={{ marginRight: '60px' }}>
@@ -77,19 +71,16 @@ const Document = (props) => {
         {
             title: () => <div style={{ color: `var( --primary-blue)` }}>Дата</div>,
             dataIndex: 'date',
-            key: 'key',
         },
         {
             title: () => <div style={{ color: `var( --primary-blue)` }}>Номер</div>,
             dataIndex: 'number',
-            key: 'key',
         },
         {
             title: () => <div style={{ color: `var( --primary-blue)`, display: 'flex' }}>
                 <img alt='' src={soderj} style={{ marginRight: '10px' }} ></img>
                 Содержание</div>,
             dataIndex: 'adress',
-            key: 'key',
             render: (text, record, index) =>
                 <div style={{ display: 'flex' }}>
                     <img alt='' src={downArr} className={s.downArr}></img>
