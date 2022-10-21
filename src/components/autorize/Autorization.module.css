@@ -11,11 +11,18 @@
 
 .titleAuto {
     margin-top: 20px;
-    margin-bottom: 40px;
     font-weight: 700;
     font-size: 36px;
-    line-height: 49px;
+    line-height: 37px;
     color: var(--primary-black);
+}
+
+.titleAuto span {
+    display: flex;
+    font-size: 18px;
+    margin-bottom: 20px;
+   align-items: center;
+   justify-content: center;
 }
 
 .linkAuto {

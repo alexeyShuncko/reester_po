@@ -51,6 +51,7 @@ const MyData = (props) => {
         const timer = DateFunc(new Date())
         props.updateNot(`Вы сохранили изменения ${timer}`)
         props.addUsers(values)
+        window.scrollTo(0, 0)
     }
 
 

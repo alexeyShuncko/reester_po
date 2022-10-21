@@ -49,6 +49,7 @@ const Autorization = (props) => {
         if (value === props.users.name) {
             name.style.border = `1px solid var(--second-green)`
             name.previousSibling.style.color = `var(--primary-grey)`
+            name.style.color = `var(--second-green)`
             loginImg.style.visibility = 'visible'
             return Promise.resolve()
         }
@@ -90,7 +91,7 @@ const Autorization = (props) => {
                 <img alt='Главная' src={main} className={s.main} style={{ cursor: 'pointer' }} />
             </div>
             <div className={s.formAuto}>
-                <div className={s.titleAuto}>Авторизация</div>
+                <div className={s.titleAuto}>Авторизация<br /><span>(Захар, 1234)</span></div>
                 <Form
                     form={form}
                     name='autor'
