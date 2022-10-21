@@ -1,5 +1,5 @@
-import eye from '../../../image/eye.svg'
-import arrow from '../../../image/arrow.svg'
+import eye from '../../../image/eye.svg';
+import arrow from '../../../image/arrow.svg';
 import s from './MyData.module.css';
 import { useState } from 'react';
 import { Form } from 'antd';
@@ -8,25 +8,19 @@ import { DateFunc } from '../../help/DateFunc';
 
 
 
-
-
-
 const MyData = (props) => {
-
-
 
     const [edit, setEdit] = useState(false)
 
     const pass = (e) => {
         let typePass = document.getElementById(e.target.previousSibling.id).type
-       
+
         if (typePass !== 'text') {
             document.getElementById(e.target.previousSibling.id).type = 'text'
         }
         else {
             document.getElementById(e.target.previousSibling.id).type = 'password'
         }
-
     }
 
     const rotaitArr = (e) => {
@@ -39,7 +33,6 @@ const MyData = (props) => {
             document.getElementById('arrSelect').style.transform = ''
             setEdit(false)
         }
-
     }
 
     const rotaitArrSity = (e) => {
@@ -52,10 +45,9 @@ const MyData = (props) => {
             document.getElementById('arrSelectSity').style.transform = ''
             setEdit(false)
         }
-
     }
 
-    const onFinish =(values)=> {
+    const onFinish = (values) => {
         const timer = DateFunc(new Date())
         props.updateNot(`Вы сохранили изменения ${timer}`)
         props.addUsers(values)
@@ -64,36 +56,29 @@ const MyData = (props) => {
 
 
     return (
-
         <div className={s.containerCabinet}>
-
             <div className={s.titleMy}>
-                <img alt='' src={props.foto}  ></img>
+                <img alt='Фото' src={props.foto} />
                 <span className={s.hello}>Здравствуй, {props.users.name}!</span>
             </div>
             <div className={s.lineMy}></div>
             <div className={s.data}>Основные данные</div>
-
-            <Form 
-            onFinish={onFinish}
-            initialValues={
-                {
-                    name: props.users.name,
-                    famili:  props.users.famili,
-                    faser: props.users.faser,
-                    country: props.users.country,
-                    sity:props.users.sity,
-                    tel:props.users.tel,
-                    pass: props.users.pass,
-
-                }
-            }>
-
-
-
+            <Form
+                onFinish={onFinish}
+                initialValues={
+                    {
+                        name: props.users.name,
+                        famili: props.users.famili,
+                        faser: props.users.faser,
+                        country: props.users.country,
+                        sity: props.users.sity,
+                        tel: props.users.tel,
+                        pass: props.users.pass,
+                    }
+                }>
                 <div style={{ display: 'flex' }}>
                     <Form.Item
-                        name="name"
+                        name='name'
                         style={{ marginBottom: 20 }}>
                         <div>
                             <div className={s.labelInput}>Имя</div>
@@ -101,28 +86,25 @@ const MyData = (props) => {
                         </div>
                     </Form.Item>
                     <Form.Item
-                        name="famili"
+                        name='famili'
                         style={{ marginBottom: 20 }}>
                         <div>
                             <div className={s.labelInput}>Фамилия</div>
                             <input className={s.inpMy} defaultValue={props.users.famili}></input>
                         </div>
                     </Form.Item>
-
-
                 </div>
                 <div style={{ display: 'flex' }}>
                     <Form.Item
-                        name="faser"
+                        name='faser'
                         style={{ marginBottom: 20 }}>
                         <div>
                             <div className={s.labelInput}>Отчество</div>
                             <input className={s.inpMy} defaultValue={props.users.faser}></input>
                         </div>
                     </Form.Item>
-
                     <Form.Item
-                        name="country"
+                        name='country'
                         style={{ marginBottom: 20 }}>
                         <div>
                             <div className={s.labelInput}>Страна</div>
@@ -132,17 +114,14 @@ const MyData = (props) => {
                                     <option>Литва</option>
                                     <option>Польша</option>
                                 </select>
-                                <img alt='' src={arrow} id='arrSelect' className={s.arrMy} ></img>
+                                <img alt='Стрелка' src={arrow} id='arrSelect' className={s.arrMy} />
                             </div>
-
                         </div>
                     </Form.Item>
-
-
                 </div>
                 <div style={{ display: 'flex' }}>
                     <Form.Item
-                        name="sity"
+                        name='sity'
                         style={{ marginBottom: 20 }}>
                         <div>
                             <div className={s.labelInput}>Город</div>
@@ -152,61 +131,54 @@ const MyData = (props) => {
                                     <option>Молодечно</option>
                                     <option>Брест</option>
                                 </select>
-                                <img alt='' src={arrow} id='arrSelectSity' className={s.arrMy} ></img>
+                                <img alt='Стрелка' src={arrow} id='arrSelectSity' className={s.arrMy} />
                             </div>
                         </div>
                     </Form.Item>
-
                     <Form.Item
-                        name="tel"
+                        name='tel'
                         style={{ marginBottom: 20 }}>
                         <div>
                             <div className={s.labelInput}>Мобильный телефон</div>
                             <input type={'tel'} className={s.inpMy} defaultValue={props.users.tel}></input>
                         </div>
                     </Form.Item>
-
-
                 </div>
                 <div className={s.lineMy}></div>
                 <div className={s.data}>Пароль</div>
                 <div style={{ display: 'flex' }}>
-
                     <Form.Item
-                        name="pass"
+                        name='pass'
                         style={{ marginBottom: 20 }}>
                         <div>
                             <div className={s.labelInput}>Новый пароль</div>
                             <div className={s.block}>
-                                <input type={'password'} id='passNew' className={s.inpMy} defaultValue={props.users.pass}></input>
-                                <img alt='' src={eye} className={s.eye} onClick={pass}></img>
+                                <input type={'password'} id='passNew'
+                                    className={s.inpMy} defaultValue={props.users.pass}></input>
+                                <img alt='Глаз' src={eye} className={s.eye} onClick={pass} />
                             </div>
-
                         </div>
                     </Form.Item>
                     <Form.Item
-                        name="passTu"
+                        name='passTu'
                         style={{ marginBottom: 20 }}>
                         <div>
                             <div className={s.labelInput}>Подтверждения пароля</div>
                             <div className={s.block}>
-                                <input type={'password'} id='pass2' className={s.inpMy} defaultValue={props.users.pass}></input>
-                                <img alt='' src={eye} className={s.eye} onClick={pass}></img>
+                                <input type={'password'} id='pass2'
+                                    className={s.inpMy} defaultValue={props.users.pass}></input>
+                                <img alt='Глаз' src={eye} className={s.eye} onClick={pass} />
                             </div>
                         </div>
                     </Form.Item>
                 </div>
                 <div className={s.lineMy}></div>
                 <Form.Item
-                        style={{ marginBottom: 20 }}>
-                <button className={s.butMy}>Сохранить</button>
+                    style={{ marginBottom: 20 }}>
+                    <button className={s.butMy}>Сохранить</button>
                 </Form.Item>
             </Form>
-
-
         </div>
-
-
     )
 }
 

@@ -1,4 +1,4 @@
-import dablArr from '../../../image/dablArr.svg'
+import dablArr from '../../../image/dablArr.svg';
 import s from './Table.module.css';
 import { Table } from 'antd';
 import { useLayoutEffect } from 'react';

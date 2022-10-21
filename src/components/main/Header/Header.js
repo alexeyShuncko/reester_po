@@ -2,11 +2,11 @@ import { useNavigate } from "react-router-dom";
 import { Button } from 'antd';
 import s from './Header.module.css';
 import { ReactComponent as ItemGrey } from '../../../image/item.svg';
-import logo from '../../../image/Vector.png'
-import search from '../../../image/search.svg'
-import calendar from '../../../image/calendar.svg'
-import user from '../../../image/user.svg'
-import arrow from '../../../image/arrow.svg'
+import logo from '../../../image/Vector.png';
+import search from '../../../image/search.svg';
+import calendar from '../../../image/calendar.svg';
+import user from '../../../image/user.svg';
+import arrow from '../../../image/arrow.svg';
 
 
 
@@ -83,4 +83,4 @@ const Header = ({ setSelect, reester }) => {
         </div>
     )
 }
-export default Header
+export default Header;

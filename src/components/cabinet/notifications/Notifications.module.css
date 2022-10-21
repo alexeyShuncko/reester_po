@@ -1,11 +1,8 @@
 .containerNot {
     margin-left: 130px;
     display: flex;
-    flex-direction: column;
-    
-    
+    flex-direction: column;  
 }
-
 
 .notItem {
     display: flex;

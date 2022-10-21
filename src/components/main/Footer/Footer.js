@@ -1,5 +1,5 @@
 import s from './Footer.module.css';
-import logo from '../../../image/Vector.png'
+import logo from '../../../image/Vector.png';
 
 const Footer =(props)=> {
   
@@ -50,4 +50,4 @@ const Footer =(props)=> {
     </div>
 )
 }
-export default Footer
+export default Footer;

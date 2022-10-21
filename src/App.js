@@ -6,7 +6,7 @@ import Autorization from './components/autorize/Autorization';
 import Cabinet from './components/cabinet/Cabinet';
 import Header from './components/main/Header/Header';
 import Footer from './components/main/Footer/Footer';
-import { addAut, addUsers, updateNot } from './Redux/reesterReducer'
+import { addAut, addUsers, updateNot } from './Redux/reesterReducer';
 
 
 
@@ -36,7 +36,7 @@ const App = (props) => {
       </Routes>
       <Footer />
     </>
-  );
+  )
 }
 
 let mapStateToProps = (state) => {

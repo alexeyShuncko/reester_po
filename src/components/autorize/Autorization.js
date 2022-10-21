@@ -1,11 +1,8 @@
 
 import s from './Autorization.module.css';
-import ret from '../../image/ret.svg'
-import main from '../../image/Главная.svg'
-import login from '../../image/login.svg'
-
-
-
+import ret from '../../image/ret.svg';
+import main from '../../image/Главная.svg';
+import login from '../../image/login.svg';
 import { Button, Checkbox, Form, Space } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { DateFunc } from './../help/DateFunc';

@@ -11,12 +11,9 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 33px;
-
     margin-left: 20px;
-
     color: var(--primary-black);
 }
-
 
 .lineMy {
     margin-top: 36px;
@@ -37,8 +34,7 @@
 
 .selectMy {
     appearance: none;
-   
-    outline:none;
+    outline: none;
     width: 370px;
     height: 56px;
     background: #F6F6F9;
@@ -50,7 +46,6 @@
     font-size: 14px;
     line-height: 19px;
     color: var(--primary-grey);
-    
 }
 
 .selectMy:hover {
@@ -58,7 +53,7 @@
 }
 
 .inpMy {
-    outline:none;
+    outline: none;
     width: 370px;
     height: 56px;
     background: var(--interface-input);
@@ -80,10 +75,6 @@
     border: 1px solid var(--primary-blue);
 }
 
-
-
-
-
 .labelInput {
     font-weight: 500;
     font-size: 14px;
@@ -91,9 +82,7 @@
     color: var(--interface-text-2)
 }
 
-
 .butMy {
-   
     width: 270px;
     height: 56px;
     background: var(--primary-blue);
@@ -104,16 +93,15 @@
     color: var(--primary-white);
     border: none;
     cursor: pointer;
-
 }
+
 .butMy:hover {
     background: #01B8D4;
 }
+
 .butMy:active {
     background: #01BEDB;
 }
-
-
 
 .eye {
     position: absolute;
@@ -127,7 +115,7 @@
 }
 
 .arrMy {
-position: absolute;
-left: 330px;
-top: 25px;
+    position: absolute;
+    left: 330px;
+    top: 25px;
 }

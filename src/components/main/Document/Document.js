@@ -1,7 +1,7 @@
 import s from './Document.module.css';
 import { Table } from 'antd';
-import downArr from '../../../image/downArr.svg'
-import soderj from '../../../image/soderj.svg'
+import downArr from '../../../image/downArr.svg';
+import soderj from '../../../image/soderj.svg';
 import { useLayoutEffect } from 'react';
 
 
@@ -92,7 +92,7 @@ const Document = (props) => {
             <Table
                 columns={columns}
                 dataSource={data}
-                size="small"
+                size='small'
                 id='table12'
                 pagination={{
                     pageSize: '10',

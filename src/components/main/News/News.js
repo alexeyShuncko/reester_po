@@ -1,10 +1,10 @@
 import s from './News.module.css';
-import foto1 from '../../../image/foto1.png'
-import calendar from '../../../image/calendar.svg'
-import foto2 from '../../../image/foto2.png'
-import foto3 from '../../../image/foto3.png'
-import foto4 from '../../../image/foto4.png'
-import foto5 from '../../../image/foto5.png'
+import foto1 from '../../../image/foto1.png';
+import calendar from '../../../image/calendar.svg';
+import foto2 from '../../../image/foto2.png';
+import foto3 from '../../../image/foto3.png';
+import foto4 from '../../../image/foto4.png';
+import foto5 from '../../../image/foto5.png';
 
 
 const News = ({ edit }) => {

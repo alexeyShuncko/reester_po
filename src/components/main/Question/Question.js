@@ -1,5 +1,5 @@
 import s from './Question.module.css';
-import plus from '../../../image/plus.svg'
+import plus from '../../../image/plus.svg';
 import { useState } from 'react';
 
 

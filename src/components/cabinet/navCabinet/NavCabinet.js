@@ -1,30 +1,23 @@
-
 import s from './NavCabinet.module.css';
 import { NavLink } from 'react-router-dom';
-
-import { ReactComponent as Coll } from '../../../image/item.svg'
-import { ReactComponent as Reestr } from '../../../image/reestr.svg'
-import { ReactComponent as My } from '../../../image/my.svg'
-import { ReactComponent as Meta } from '../../../image/meta.svg'
-import { ReactComponent as Secur } from '../../../image/close.svg'
-import { ReactComponent as Load } from '../../../image/arrDo.svg'
-import { ReactComponent as Exit } from '../../../image/exit.svg'
-
+import { ReactComponent as Coll } from '../../../image/item.svg';
+import { ReactComponent as Reestr } from '../../../image/reestr.svg';
+import { ReactComponent as My } from '../../../image/my.svg';
+import { ReactComponent as Meta } from '../../../image/meta.svg';
+import { ReactComponent as Secur } from '../../../image/close.svg';
+import { ReactComponent as Load } from '../../../image/arrDo.svg';
+import { ReactComponent as Exit } from '../../../image/exit.svg';
 import { useEffect } from 'react';
 import { DateFunc } from '../../help/DateFunc';
 
 
 const NavCabinet = (props) => {
 
-    
-
     useEffect (()=> {
         document.getElementById('Мои данные').focus()
     }, [])
 
-   
-
-    let settingArr = [
+    const settingArr = [
         { name: 'Мои данные', path: '/cabinet/', 
         img: <My className={s.svg} />, 
         imgBlue:<My className={s.logoSvg} /> },
@@ -45,8 +38,7 @@ const NavCabinet = (props) => {
         imgBlue: <Load className={s.logoSvg}/> },
         { name: 'Выход', path: '/', 
         img: <Exit  style={{fill: `var(--second-red)`,marginRight: '20px'}}/>,
-        imgBlue: <Exit /> },
-        
+        imgBlue: <Exit /> }, 
     ]
 
 
@@ -60,17 +52,16 @@ const NavCabinet = (props) => {
     }
 
 
-    
-
     return (
         <div className={s.buttons}>
             {
                 settingArr.map(a =>
                     <div key={a.name}>
                         <NavLink to={a.path}   >
-                            <button size='large' id={a.name}
+                            <button 
+                            size='large' 
+                            id={a.name}
                             onClick={colorBlue} 
-                            
                             className={ props.select === a.name ? s.navActive : s.navDiv}>
 
                                 <div style={{ display: 'flex' }} >
@@ -79,7 +70,6 @@ const NavCabinet = (props) => {
                                          ? a.img
                                          : a.imgBlue 
                                     }
-                                   
                                     {a.name === 'Выход'
                                         ? <span 
                                             style={{
@@ -88,9 +78,7 @@ const NavCabinet = (props) => {
                                                 fontSize: 18
                                             }}>
                                             {a.name}</span>
-                                        :
-                                        a.name}
-
+                                        : a.name}
                                 </div>
                             </button>
                         </NavLink>
@@ -101,7 +89,7 @@ const NavCabinet = (props) => {
     )
 }
 
-export default NavCabinet
+export default NavCabinet;
 
 
 
