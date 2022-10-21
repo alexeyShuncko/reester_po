@@ -1,0 +1,151 @@
+.head {
+    display: flex;
+    background: var(--primary-white);
+    height: 80px;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+}
+
+.logo {
+    height: 40px;
+    width: 170px;
+    margin: 20px 0px 20px 115px;
+    cursor: pointer;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 0px 10px 10px;
+    gap: 5px;
+    position: absolute;
+    left: 22.5%;
+    right: 58.21%;
+    top: 20%;
+    bottom: 20%;
+    border-radius: 5px;
+}
+
+.searchImg {
+    position: absolute;
+    left: 6%;
+    right: 16.2%;
+    top: 22%;
+    bottom: 16.42%;
+}
+
+.search input {
+    outline: none;
+    width: 270px;
+    height: 48px;
+    background: var(--interface-search);
+    border: none;
+    padding-left: 39px;
+    border-radius: 5px;
+}
+
+.search input:hover {
+    border: 1px solid var(--primary-blue);
+}
+
+.search input::placeholder {
+    width: 118px;
+    height: 19px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--second-grey);
+}
+
+.calendar {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: calc(50% - 48px/2 - 171px);
+    top: 0px;
+    background: var(--interface-search);
+    border-radius: 30px;
+}
+
+.calendarImg {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: calc(50% - 32px/2 - 171px);
+    top: 8px;
+    color: var(--primary-grey);
+}
+
+.room {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 20px;
+    position: absolute;
+    height: 48px;
+    left: 63.93%;
+    right: 8.21%;
+    top: calc(50% - 48px/2);
+}
+
+.item {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: calc(50% - 48px/2 - 103px);
+    top: 0px;
+    background: var(--interface-search);
+    border-radius: 30px;
+}
+
+.itemImg {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: calc(50% - 32px/2 - 103px);
+    top: 8px;
+    cursor: pointer;
+    fill: var(--interface-text-1);
+}
+
+.num {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 94px;
+    top: 0px;
+    background: var(--primary-blue);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    border-radius: 10px;
+    color: var(--primary-white)
+}
+
+.line {
+    width: 2px;
+    height: 48px;
+    background: var(--interface-search);
+    border-radius: 3px;
+    margin-left: 110px;
+    flex: none;
+}
+
+.user {
+    margin-right: 20px;
+    width: 52px;
+    height: 48px;
+    background: var(--interface-search);
+    border-radius: 40px;
+}
+
+.arrow {
+    margin-left: 20px;
+}
