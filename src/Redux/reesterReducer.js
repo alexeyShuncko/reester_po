@@ -1,10 +1,8 @@
-
 import foto from '../image/profileFoto.svg'
 
 const ADD_USERS = 'ADD_USERS'
 const ADD_AUT = 'ADD_AUT'
 const ADD_NOT = 'ADD_NOT'
-
 
 
 let initialState = {
@@ -19,19 +17,13 @@ let initialState = {
         'Вы сохранили Имя',
         'Вы сохранили Фамилию',
     ]
-
 }
-
 
 
 const reesterReducer = (state = initialState, action) => {
 
-
     switch (action.type) {
-
-
         case ADD_USERS:
-
             return {
                 ...state,
                 users: action.data
@@ -46,7 +38,6 @@ const reesterReducer = (state = initialState, action) => {
                 ...state,
                 notifications: [...state.notifications, action.data]
             }
-
         default:
             return state
     }
@@ -63,5 +54,4 @@ export const addAut = (data) => {
 }
 
 
-
-export default reesterReducer
+export default reesterReducer;
