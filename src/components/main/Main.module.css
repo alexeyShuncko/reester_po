@@ -32,7 +32,6 @@
     margin-bottom: 20px;
 }
 
-
 .title {
     width: 404px;
     height: 54px;
@@ -45,7 +44,6 @@
     flex-grow: 0;
     margin-bottom: 20px;
 }
-
 
 .PO {
     width: 277px;
@@ -63,7 +61,6 @@
 .colorNum {
     color: var(--primary-blue);
 }
-
 
 .inpBut {
     display: flex;
@@ -152,7 +149,6 @@
 .voronka {
     margin-right: 30px;
 }
-
 
 .newsTitle {
     width: 331px;

@@ -16,7 +16,6 @@
     flex: 1;
 }
 
-
 .questionListItem {
     font-weight: 700;
     font-size: 18px;
@@ -24,7 +23,6 @@
     color: var(--primary-grey);
     margin-bottom: 23.5px;
 }
-
 
 .questionListItem1 {
     display: flex;

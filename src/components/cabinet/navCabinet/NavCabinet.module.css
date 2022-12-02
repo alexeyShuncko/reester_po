@@ -1,4 +1,4 @@
-.containerCabinet{
+.containerCabinet {
     padding: 80px 115px;
 }
 
@@ -15,7 +15,7 @@
     outline: none;
     width: 270px;
     height: 72px;
-    color: var(--interface-text-1) ;
+    color: var(--interface-text-1);
     font-weight: 500;
     font-size: 18px;
     background: none;
@@ -54,4 +54,3 @@
     margin-right: 20px;
     fill: var(--primary-blue)
 }
-
